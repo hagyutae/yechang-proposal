@@ -1,6 +1,6 @@
 # yechang-proposal (예창패 사업계획서 플러그인)
 
-[![Version](https://img.shields.io/badge/version-1.0.0-blue.svg)](https://github.com/gted0221/yechang-proposal/releases)
+[![Version](https://img.shields.io/badge/version-1.1.0-blue.svg)](https://github.com/hagyutae/yechang-proposal/releases)
 [![Claude Code Plugin](https://img.shields.io/badge/Claude_Code-Plugin-orange.svg)](https://claude.ai)
 [![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
 
@@ -12,7 +12,7 @@
 
 ```bash
 # .plugin 파일 다운로드 후 설치
-claude plugin install yechang-proposal-v1.plugin
+claude plugin install yechang-proposal-v1.1.plugin
 ```
 
 또는 Releases 페이지에서 최신 `.plugin` 파일을 다운로드하여 설치하세요.
@@ -30,7 +30,7 @@ claude plugin install yechang-proposal-v1.plugin
     ↓
 /write [섹션번호]      → 피드백 반영 수정
     ↓
-/export word|pdf       → 최종 파일 출력
+/export word|pdf|notion → 최종 파일 출력
 ```
 
 ## 커맨드
@@ -40,7 +40,7 @@ claude plugin install yechang-proposal-v1.plugin
 | `/new [사업명]` | 예창패 프로젝트 시작. 2025년 내장 자료 사용 또는 최신 자료 업로드 |
 | `/write [섹션번호]` | 특정 섹션 작성 또는 수정. 반복 실행 시 해당 섹션만 업데이트 |
 | `/review [섹션번호]` | 2025년 예창패 심사 기준으로 전체 또는 특정 섹션 검토 및 개선 피드백 |
-| `/export word\|pdf` | 완성된 사업계획서를 Word(.docx) 또는 PDF로 출력 |
+| `/export word\|pdf\|notion` | 완성된 사업계획서를 Word, PDF 또는 Notion 페이지로 출력 |
 | `/research [URL\|키워드]` | 외부 URL/검색으로 시장 데이터, 경쟁사, 기술 동향을 수집하여 섹션에 반영 |
 | `/update [연도]` | 새로운 연도 예창패 자료로 기존 프로젝트 업데이트 |
 
@@ -51,6 +51,7 @@ claude plugin install yechang-proposal-v1.plugin
 - **심사 기준 기반 작성** — 문제인식(30~40%), 실현가능성(25~35%), 성장전략(15~25%), 팀구성(10~20%) 배점에 맞춘 가이드
 - **외부 자료 리서치** — URL 또는 키워드로 시장 규모, 경쟁사, 기술 동향 수집 → 출처와 함께 섹션에 반영
 - **심사 검토** — 항목별 점수 예측, 60점 미만 탈락 기준 체크, 가점(AI대학원/경진대회/기후테크) 확인
+- **Notion 내보내기** — 사업계획서를 Notion 페이지 또는 섹션별 데이터베이스로 출력하여 팀 협업 가능
 - **15페이지 준수** — 분량 관리 및 페이지 초과 경고
 
 ## 2025년 예창패 기준
@@ -86,7 +87,7 @@ yechang-proposal/
 │   ├── new.md            # 프로젝트 시작
 │   ├── write.md          # 섹션 작성
 │   ├── review.md         # 심사 검토
-│   ├── export.md         # 파일 출력
+│   ├── export.md         # 파일 출력 (Word/PDF/Notion)
 │   ├── research.md       # 외부 자료 리서치
 │   └── update.md         # 자료 업데이트
 ├── skills/
@@ -110,7 +111,7 @@ yechang-proposal/
 
 ```bash
 cd yechang-proposal
-zip -r ../yechang-proposal-v1.plugin . -x "*.DS_Store" ".git/*" "*.md~"
+zip -r ../yechang-proposal-v1.1.plugin . -x "*.DS_Store" ".git/*" "*.md~"
 ```
 
 ## 라이선스

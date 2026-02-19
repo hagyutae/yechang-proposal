@@ -5,7 +5,7 @@ description: >
   "주관기관 추천해줘", "주관기관 골라줘", "섹션 채워줘", "사업계획서 검토해줘",
   or any task involving the 예비창업패키지 (예창패) application process — including
   form analysis, host institution selection, section writing, reviewing, or exporting.
-version: 1.0.0
+version: 1.1.0
 ---
 
 # 예비창업패키지(예창패) 사업계획서 작성 가이드
